@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noemi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="pop-up__wrapper">
+        <form class="pop-up">
+            <button type="button" class="pop-up__x-btn" onclick="togglePopup();"></button>
+            <h1 class="section__title" style="margin-bottom: 35px;">ваш фидбек</h1>
+    
+            <div class="pop-up__form__row">
+                <label class="pop-up__label" for="pop-up__cmbx">Как часто вы заходите на сайт?</label>
+                <div class="combo-box__wrapper">
+                    <input id="pop-up__cmbx" class="pop-up__frequency-input" type="text" list="exampleList" placeholder="Почти каждый день">
+                        <datalist id="exampleList">
+                            <option>Почти каждый день</option>
+                            <option>Раз в пару дней</option>
+                            <option>Раз в неделю</option>
+                            <option>Раз в месяц или реже</option>
+                        </datalist>
+                    <img src="./sources/svg/form-arrows.svg" alt="стрелки" class="combo-box__arrows-img">
+                </div>
+            </div>
+    
+            <div class="pop-up__form__row" style="margin-top: 29px;">
+                <p class="pop-up__label">Вы подписаны на e-mail рассылку?</p>
+                <fieldset class="pop-up__radio-inputs">
+                    <div>
+                        <input type="radio" id="yes-rbtn" name="drone" value="Да" checked="">
+                        <label class="pop-up__rbtn-label" for="yes-rbtn">Да</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="no-rbtn" name="drone" value="Нет">
+                        <label class="pop-up__rbtn-label" for="no-rbtn">Нет</label>
+                    </div>
+                </fieldset>
+            </div>
+    
+            <div class="pop-up__form__row" style="margin-top: 24px;margin-bottom: 10px;">
+                <label class="pop-up__label" for="requests_textaera" style="letter-spacing: 0.017em;">Расскажие, какой контент вы бы хотели видеть на нашем сайте?</label>
+                <textarea id="requests_textaera" name="requests" rows="5" cols="33" placeholder="Может, больше рецептов?" class="pop-up__textarea"></textarea>
+            </div>
+    
+            <button type="submit" class="mailing__form__confirm-btn">отправить</button>
+        </form>
+    </div>
+    <header class="hero masked">
+        <div class="container">
+            <div class="hero__menu">
+                <a href="#0">
+                    <img src="./sources/svg/noemi-logo.svg" alt="noemi" class="noemi-logo">
+                </a>
+                <nav class="menu">
+                    <ul class="menu__links-list">
+                        <li class="menu__link"><a href="#0">главная</a></li>
+                        <li class="menu__link"><a href="#0">посты</a></li>
+                        <li class="menu__link"><a href="#0">статьи</a></li>
+                        <li class="menu__link"><a href="#0">теги</a></li>
+                        <li class="menu__link"><a href="#0">темы</a></li>
+                        <li class="menu__link"><a href="#0">контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="title-wrapper">
+                <h1 class="hero__title">блог о творчестве, спорте,<br>и образе жизни</h1>
+            </div>
+        </div>
+    </header>
+    <section class="trends">
+        <h1 class="section__title">сейчас в тренде</h1>
+        <article class="trend-post masked" style="background-image: url('./sources/img/trend1.jpg') ;">
+            <div class="trend-post__info">
+                <ul class="post__tags-list">
+                    <li class="post__tag"><a href="#0">travel</a></li>
+                    <li class="post__tag"><a href="#0">health</a></li>
+                </ul>
+                <h2 class="trend-post__title">сейчас в тренде: сад на подоконнике</h2>
+            </div>
+        </article>
+        <article class="trend-post masked" style="background-image: url('./sources/img/trend2.jpg') ;">
+            <div class="trend-post__info">
+                <ul class="post__tags-list">
+                    <li class="post__tag"><a href="#0">travel</a></li>
+                    <li class="post__tag"><a href="#0">health</a></li>
+                </ul>
+                <h2 class="trend-post__title">сыры на красивых картинках из интернета: какие они на вкус?</h2>
+            </div>
+        </article>
+        <article class="trend-post masked" style="background-image: url('./sources/img/trend3.jpg') ;">
+            <div class="trend-post__info">
+                <ul class="post__tags-list">
+                    <li class="post__tag"><a href="#0">travel</a></li>
+                    <li class="post__tag"><a href="#0">health</a></li>
+                </ul>
+                <h2 class="trend-post__title">собираемся в первый поход в горы</h2>
+            </div>
+        </article>
+        <article class="trend-post masked" style="background-image: url('./sources/img/trend4.jpg') ;">
+            <div class="trend-post__info">
+                <ul class="post__tags-list">
+                    <li class="post__tag"><a href="#0">travel</a></li>
+                    <li class="post__tag"><a href="#0">health</a></li>
+                </ul>
+                <h2 class="trend-post__title">сейчас в тренде: сколько витамина с в лимонах?</h2>
+            </div>
+        </article>
+    </section>
+    <div class="container container-justified">
+        <main class="post-list">
+            <article class="post">
+                <div class="img">
+                    <img class="post__pic undraggable" src="./sources/img/last-post1.jpg" alt="человек на берегу на рассвете">
+                </div>
+                <div class="post__info">
+                    <ul class="post__tags-list">
+                        <li class="post__tag"><a href="#0">travel</a></li>
+                        <li class="post__tag"><a href="#0">health</a></li>
+                    </ul>
+                    <h2 class="post__title"><a href="#0">10 мест, ради которых стоит проснуться на рассвете</a></h2>
+                    <address class="post__meta">
+                        <time class="post__pubdate" datetime="2019-10-10" title="10 июня 2019">10 июня
+                            2019</time>
+                        <a class="post__author" rel="author" href="#0">Неизвестный автор</a>
+                    </address>
+                    <div class="post__text">
+                        <p class="post__text__paragraph">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже
+                            ушёл,
+                            запущены фонтаны
+                            города. Музеи ещё закрыты. Что посмотреть?</p>
+                    </div>
+                </div>
+            </article>
+            <article class="post">
+                <div class="img">
+                    <img class="post__pic undraggable" src="./sources/img/last-post2.jpg"
+                        alt="девушка на берегу занимается йогой">
+                </div>
+                <div class="post__info">
+                    <ul class="post__tags-list">
+                        <li class="post__tag"><a href="#0">health</a></li>
+                        <li class="post__tag"><a href="#0">lifestyle</a></li>
+                    </ul>
+                    <h2 class="post__title"><a href="#0">йога для начинающих в домашних условиях</a></h2>
+                    <address class="post__meta">
+                        <time class="post__pubdate" datetime="2019-10-10" title="10 июня 2019">10 июня
+                            2019</time>
+                        <a class="post__author" rel="author" href="#0">Неизвестный автор</a>
+                    </address>
+                    <div class="post__text">
+                        <p class="post__text__paragraph">Расскажем, какие упражнения выбрать и как сделать коврик
+                            для
+                            занятий йогой из
+                            того, что можно найти в шкафу.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="post">
+                <div class="img">
+                    <img class="post__pic undraggable" src="./sources/img/last-post3.jpg"
+                        alt="девушка в толпе на концерте">
+                </div>
+                <div class="post__info">
+                    <ul class="post__tags-list">
+                        <li class="post__tag"><a href="#0">music</a></li>
+                    </ul>
+                    <h2 class="post__title"><a href="#0">лучшие музыкальные фестивали этого лета</a></h2>
+                    <address class="post__meta">
+                        <time class="post__pubdate" datetime="2019-10-10" title="10 июня 2019">10 июня
+                            2019</time>
+                        <a class="post__author" rel="author" href="#0">Неизвестный автор</a>
+                    </address>
+                    <div class="post__text">
+                        <p class="post__text__paragraph">Лето на носу, а с ним и музыкальные фестивали. На каком же
+                            из
+                            них вы разобьёте
+                            свою палатку?</p>
+                        <p class="post__text__paragraph">Мы составили список лучших летних фестивалей по всему миру
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="post">
+                <div class="img">
+                    <img class="post__pic undraggable" src="./sources/img/last-post4.jpg" alt="обеденный стол">
+                </div>
+                <div class="post__info">
+                    <ul class="post__tags-list">
+                        <li class="post__tag"><a href="#0">lifestyle</a></li>
+                        <li class="post__tag"><a href="#0">food</a></li>
+                    </ul>
+                    <h2 class="post__title"><a href="#0">наукоёмкий подход к кулинарии</a></h2>
+                    <address class="post__meta">
+                        <time class="post__pubdate" datetime="2019-10-10" title="10 июня 2019">10 июня
+                            2019</time>
+                        <a class="post__author" rel="author" href="#0">Неизвестный автор</a>
+                    </address>
+                    <div class="post__text">
+                        <p class="post__text__paragraph">Узнаем основы проектирования новых пищевых и около-пищевых
+                            опытов, вскроем
+                            физику, химию и микробиологию еды.</p>
+                    </div>
+                </div>
+            </article>
+            <article class="post">
+                <div class="img">
+                    <img class="post__pic undraggable" src="./sources/img/last-post5.jpg"
+                        alt="розовая подушка на белом стуле">
+                </div>
+                <div class="post__info">
+                    <ul class="post__tags-list">
+                        <li class="post__tag"><a href="#0">lifestyle</a></li>
+                        <li class="post__tag"><a href="#0">interior</a></li>
+                        <li class="post__tag"><a href="#0">art</a></li>
+                    </ul>
+                    <h2 class="post__title"><a href="#0">делаем модные принты на подушках для интерьера</a></h2>
+                    <address class="post__meta">
+                        <time class="post__pubdate" datetime="2019-10-10" title="10 июня 2019">10 июня
+                            2019</time>
+                        <a class="post__author" rel="author" href="#0">Неизвестный автор</a>
+                    </address>
+                    <div class="post__text">
+                        <p class="post__text__paragraph">Подушки для дивана целесообразнее заказать в съемных чехлах
+                            на
+                            молнии, если
+                            потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
+                    </div>
+                </div>
+            </article>    
+        </main>
+        <aside class="widgets">
+            <section class="new-posts">
+                <h2 class="widget__title">новые посты</h2>
+                <article class="new-post">
+                    <div class="img">
+                        <img class="new-post__thumbnail undraggable" src="./sources/img/2.jpg" alt="человек на берегу на рассвете">
+                    </div>
+                    <time class="new-post__pubdate" datetime="2019-10-14" title="14 июня 2019">14 июня 2019</time>
+                    <h3 class="new-post__title"><a href="#0">10 мест, ради которых стоит проснуться</a></h3>
+                </article>
+                <article class="new-post">
+                    <div class="img">
+                        <img class="new-post__thumbnail undraggable" src="./sources/img/151.jpg"
+                            alt="девушка на берегу занимается йогой">
+                    </div>
+                    <time class="new-post__pubdate" datetime="2019-10-14" title="14 июня 2019">14 июня 2019</time>
+                    <h3 class="new-post__title"><a href="#0">йога для домашних</a></h3>
+                </article>
+                <article class="new-post">
+                    <div class="img">
+                        <img class="new-post__thumbnail undraggable" src="./sources/img/45.jpg" alt="лаунж зона">
+                    </div>
+                    <time class="new-post__pubdate" datetime="2019-10-14" title="14 июня 2019">14 июня 2019</time>
+                    <h3 class="new-post__title"><a href="#0">как мы превратили классное место в балкон</a></h3>
+                </article>
+                <article class="new-post">
+                    <div class="img">
+                        <img class="new-post__thumbnail undraggable" src="./sources/img/501.jpg" alt="обеденный стол">
+                    </div>
+                    <time class="new-post__pubdate" datetime="2019-10-14" title="14 июня 2019">14 июня 2019</time>
+                    <h3 class="new-post__title"><a href="#0">кулинарный подход к науке</a></h3>
+                </article>
+                <article class="new-post">
+                    <div class="img">
+                        <img class="new-post__thumbnail undraggable" src="./sources/img/7.jpg"
+                            alt="три девушки с длинными волосами, вид со спины">
+                    </div>
+                    <time class="new-post__pubdate" datetime="2019-10-14" title="14 июня 2019">14 июня 2019</time>
+                    <h3 class="new-post__title"><a href="#0">лучшие причёски для распущенных волос</a></h3>
+                </article>
+                <form class="search__form">
+                    <label for="search-input1" class="visualy-hidden">поиск по новостям</label>
+                    <input type="search" id="search-input1" class="search-form__textbox" placeholder="Найти..."
+                        required>
+                    <button type="submit" class="search__form__lense-btn"></button>
+                </form>
+            </section>
+            <section class="mailing">
+                <h2 class="widget__title">рассылка</h2>
+                <form class="mailing__form">
+                    <label for="email-input1" class="visualy-hidden"></label>
+                    <input type="email" id="email-input1" class="mailing__form__email" placeholder="Ваш email-адрес"
+                        required>
+                    <label for="email-input2" class="visualy-hidden"></label>
+                    <button type="submit" class="mailing__form__confirm-btn" id="email-input2">подписаться</button>
+                </form>
+            </section>
+            <section class="tags-widget">
+                <h2 class="widget__title">теги</h2>
+                <ul class="tags-list">
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>fashion</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>music</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>lifestyle</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>art</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>interior</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>travel</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>food</a>
+                    </li>
+                    <li class="tags-list-item">
+                        <a class="widget__tag" href=#>health</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="themes-widget">
+                <h2 class="widget__title">темы</h2>
+                <ul class="theme-list">
+                    <li class="theme-list-item">
+                        <a href="#0">
+                            <span class="theme" data-post-count="12">Красота</span>
+                        </a>
+                    </li>
+                    <li class="theme-list-item">
+                        <a href="#0">
+                            <span class="theme" data-post-count="4">Здоровье</span>
+                        </a>
+                    </li>
+                    <li class="theme-list-item">
+                        <a href="#0">
+                            <span class="theme" data-post-count="145">Образ жизни</span>
+                        </a>
+                    </li>
+                    <li class="theme-list-item">
+                        <a href="#0">
+                            <span class="theme" data-post-count="28">Музыка</span>
+                        </a>
+                    </li>
+                    <li class="theme-list-item">
+                        <a href="#0">
+                            <span class="theme" data-post-count="62">Спорт</span>
+                        </a>
+                    </li>
+                    <li class="theme-list-item">
+                        <a href="#0">
+                            <span class="theme" data-post-count="8">Йога</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+
+    <section class="our-products">
+        <div class="container">
+            <h1 class="section__title">наши изделия</h1>
+            <div class="products-list">
+                <article class="product">
+                    <img src="./sources/img/shop-item-desk1.jpg" alt="розовая подушка на белом стуле" class="product__image">
+                    <div class="product__info">
+                        <h2 class="product__title">подушки на диван</h2>
+                        <p class="product__description">Набор из двух подушек с модными принтами. Видео о создании <a class="product__link" href="#">здесь</a>.</p>
+                        <div class="purchase-info__wrapper">
+                            <span class="product__price product__price__before">1000 ₽</span>
+                            <span class="product__price">800 ₽</span>
+                            <label for="email-input2" class="visualy-hidden"></label>
+                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn" id="email-input2">в мазазин</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="./sources/img/shop-item-desk2.jpg" alt="кукла-зайчик рядом со стопкой книг" class="product__image">
+                    <div class="product__info">
+                        <h2 class="product__title">кукла "зайчик"</h2>
+                        <p class="product__description">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a class="product__link" href="#">весенняя серия постов</a> в блоге и несколько подкастов</p>
+                        <div class="purchase-info__wrapper">
+                            <span class="product__price">3500 ₽</span>
+                            <label for="email-input2" class="visualy-hidden"></label>
+                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn" id="email-input2">в мазазин</button>
+                        </div>
+                    </div>
+                </article>
+                <article class="product">
+                    <img src="./sources/img/shop-item-desk3.jpg" alt="шестиугольная рамка рядом с вазой с цветами" class="product__image">
+                    <div class="product__info">
+                        <h2 class="product__title">шестиугольная рамка</h2>
+                        <p class="product__description">Необычная рамка для украшения дома из видео <a class="product__link" href="#">"Как сделать рамку из подручных средств за 30 минут"</a>.</p>
+                        <div class="purchase-info__wrapper">
+                            <span class="product__price product__price__before">500 ₽</span>
+                            <span class="product__price">400 ₽</span>
+                            <label for="email-input2" class="visualy-hidden"></label>
+                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn" id="email-input2">в мазазин</button>
+                        </div>
+                    </div>
+                </article>
+                
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__social-network">
+                <ul class="social-media-list">
+                    <li class="social-media-list-item">
+                        <a href="#0">
+                            <div class="social-media-icon dribble"><span class="visualy-hidden">dribble icon</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="social-media-list-item">
+                        <a href="#0">
+                            <div class="social-media-icon pinterest"><span class="visualy-hidden">pinterest
+                                    icon</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="social-media-list-item">
+                        <a href="#0">
+                            <div class="social-media-icon tumblr"><span class="visualy-hidden">tumblr icon</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__copyrights-wrapper">
+                <a href="#0">
+                    <p class="footer__copyrights">Copyright © 2009–2019 City Blog LLC.</p>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function ImageOnError(event) {
+            var image = event.target;
+
+            image.classList.add('unloaded-pic');
+            image.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='492' viewBox='0 0 540 492' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M182.905 366L138 156.728L281.202 126L243.043 185.009L228.37 207.7L251.06 222.373L295.727 251.257L274.711 283.755L251.23 320.066L229.726 353.32L258.8 325.935L318.448 269.751L281.977 231.031L263.45 211.361L283.12 192.834L334.273 144.651L401.817 146.671L395.418 360.611L228.244 355.612L227.749 356.377L182.905 366Z' fill='white'/%3E%3Cpath d='M138 156.728L137.895 156.239L137.406 156.344L137.511 156.833L138 156.728ZM182.905 366L182.416 366.105L182.521 366.594L183.01 366.489L182.905 366ZM281.202 126L281.622 126.272L282.277 125.258L281.097 125.511L281.202 126ZM243.043 185.009L242.623 184.738L242.623 184.738L243.043 185.009ZM228.37 207.7L227.95 207.429L227.678 207.848L228.098 208.12L228.37 207.7ZM251.06 222.373L250.789 222.793L250.789 222.793L251.06 222.373ZM295.727 251.257L296.146 251.529L296.418 251.109L295.998 250.837L295.727 251.257ZM274.711 283.755L275.131 284.027L275.131 284.027L274.711 283.755ZM251.23 320.066L251.65 320.338L251.65 320.338L251.23 320.066ZM229.726 353.32L229.306 353.048L230.069 353.684L229.726 353.32ZM258.8 325.935L259.142 326.299L259.142 326.299L258.8 325.935ZM318.448 269.751L318.791 270.115L319.155 269.772L318.812 269.408L318.448 269.751ZM281.977 231.031L281.613 231.374L281.613 231.374L281.977 231.031ZM263.45 211.361L263.107 210.997L262.743 211.34L263.086 211.704L263.45 211.361ZM283.12 192.834L282.777 192.47L282.777 192.47L283.12 192.834ZM334.273 144.651L334.288 144.151L334.081 144.145L333.93 144.287L334.273 144.651ZM401.817 146.671L402.317 146.686L402.331 146.186L401.832 146.172L401.817 146.671ZM395.418 360.611L395.403 361.111L395.903 361.126L395.918 360.626L395.418 360.611ZM228.244 355.612L228.259 355.112L227.978 355.103L227.825 355.34L228.244 355.612ZM227.749 356.377L227.854 356.866L228.057 356.823L228.169 356.649L227.749 356.377ZM137.511 156.833L182.416 366.105L183.394 365.895L138.489 156.623L137.511 156.833ZM281.097 125.511L137.895 156.239L138.105 157.217L281.307 126.489L281.097 125.511ZM243.463 185.281L281.622 126.272L280.782 125.728L242.623 184.738L243.463 185.281ZM228.79 207.972L243.463 185.281L242.623 184.738L227.95 207.429L228.79 207.972ZM251.332 221.953L228.641 207.28L228.098 208.12L250.789 222.793L251.332 221.953ZM295.998 250.837L251.332 221.953L250.789 222.793L295.455 251.677L295.998 250.837ZM275.131 284.027L296.146 251.529L295.307 250.986L274.291 283.484L275.131 284.027ZM251.65 320.338L275.131 284.027L274.291 283.484L250.81 319.795L251.65 320.338ZM230.146 353.591L251.65 320.338L250.81 319.795L229.306 353.048L230.146 353.591ZM230.069 353.684L259.142 326.299L258.457 325.571L229.384 352.956L230.069 353.684ZM259.142 326.299L318.791 270.115L318.105 269.387L258.457 325.571L259.142 326.299ZM318.812 269.408L282.341 230.688L281.613 231.374L318.084 270.094L318.812 269.408ZM282.341 230.688L263.814 211.018L263.086 211.704L281.613 231.374L282.341 230.688ZM263.793 211.725L283.462 193.198L282.777 192.47L263.107 210.997L263.793 211.725ZM283.462 193.198L334.616 145.015L333.93 144.287L282.777 192.47L283.462 193.198ZM334.258 145.151L401.802 147.171L401.832 146.172L334.288 144.151L334.258 145.151ZM401.317 146.656L394.919 360.596L395.918 360.626L402.317 146.686L401.317 146.656ZM395.433 360.111L228.259 355.112L228.23 356.111L395.403 361.111L395.433 360.111ZM228.169 356.649L228.664 355.883L227.825 355.34L227.329 356.106L228.169 356.649ZM183.01 366.489L227.854 356.866L227.644 355.889L182.8 365.511L183.01 366.489Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M182.905 366L138 156.728L281.202 126L243.043 185.009C238.983 183.408 234.423 182.947 229.837 183.931C217.453 186.588 209.569 198.781 212.226 211.164C214.883 223.547 227.076 231.432 239.459 228.775C244.046 227.791 248.015 225.499 251.06 222.373L295.727 251.257L274.711 283.755L238.4 260.274L203.179 314.741L206.386 329.689L251.23 320.066L227.749 356.377L182.905 366Z' fill='black'/%3E%3Cpath d='M395.418 360.611L401.817 146.671L334.273 144.651L283.119 192.834C289.17 197.125 293.028 204.268 292.79 212.238C292.552 220.209 288.274 227.108 281.977 231.031L318.448 269.751L368.969 222.164L365.77 329.134L258.8 325.935L227.323 355.584L395.418 360.611Z' fill='black'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M182.905 366L138 156.728L281.202 126L243.043 185.009C238.983 183.408 234.423 182.947 229.837 183.931C217.453 186.588 209.569 198.781 212.226 211.164C214.883 223.547 227.076 231.432 239.459 228.775C244.046 227.791 248.015 225.499 251.06 222.373L295.727 251.257L274.711 283.755L238.4 260.274L203.179 314.741L206.386 329.689L251.23 320.066L227.749 356.377L182.905 366Z' stroke='black'/%3E%3Cpath d='M395.418 360.611L401.817 146.671L334.273 144.651L283.119 192.834C289.17 197.125 293.028 204.268 292.79 212.238C292.552 220.209 288.274 227.108 281.977 231.031L318.448 269.751L368.969 222.164L365.77 329.134L258.8 325.935L227.323 355.584L395.418 360.611Z' stroke='black'/%3E%3C/svg%3E";
+            image.removeEventListener('error', ImageOnError);
+        }
+
+        images = document.getElementsByTagName('img');
+        for (let i = 0; i < images.length; i++) {
+            images[i].addEventListener('error', ImageOnError)
+        }
+
+        const popup = document.getElementsByClassName('pop-up__wrapper')[0];
+        
+        function togglePopup() { 
+            if(popup.classList.contains('visualy-hidden')) {
+                popup.classList.remove('visualy-hidden');
+            }
+            else {
+                popup.classList.add('visualy-hidden');
+            }
+             
+        }
+
+
+        // document.addEventListener('click', togglePopup);
+        // document.onkeypress = togglePopup;
+    </script>
+</body>
+
+</html>
