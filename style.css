@@ -139,7 +139,7 @@ button {
 
 /* ---------- pop-up ---------- */
 
-.pop-up__wrapper {
+.pop-up-wrapper {
     height: 100vh;
     width: 100vw;
     position: fixed;
@@ -150,7 +150,7 @@ button {
     z-index: 10;
 }
 
-.pop-up__wrapper:after {
+.pop-up-wrapper:after {
     content: "";
     position: fixed;
 
@@ -209,6 +209,31 @@ button {
     background-color: transparent;
 }
 
+.pop-up__title {
+    position: relative;
+
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.pop-up__title:after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 35px);
+
+    width: 66px;
+    height: 3px;
+    background: #b59f5b;
+}
+
 .pop-up__label {
     font-size: 13px;
     letter-spacing: 0.017em;
@@ -218,15 +243,15 @@ button {
     margin-top: 7px;
 }
 
-.combo-box__wrapper {
+.pop-up__combobox {
     position: relative;
 }
 
-.combo-box__wrapper * {
+.pop-up__combobox * {
     z-index: 2;
 }
 
-.pop-up__frequency-input {
+.combobox-field {
     position: relative;
     display: block;
     width: 100%;
@@ -234,7 +259,7 @@ button {
     font-size: 13px;
 }
 
-.combo-box__arrows-img {
+.combobox__arrows-img {
     position: absolute;
     right: 0;
     top: 0;
@@ -246,8 +271,9 @@ button {
     opacity: 0;
 }
 
-.combo-box__wrapper:hover .combo-box__arrows-img,
-.pop-up__frequency-input:focus ~ .combo-box__arrows-img {
+.pop-up__label[for=combobox-field1]:hover + .pop-up__combobox .combobox__arrows-img, /* cringe, i know.. */
+.pop-up__combobox:hover .combobox__arrows-img,
+.combobox-field:focus ~ .combobox__arrows-img {
     opacity: 1;
 }
 
@@ -271,6 +297,19 @@ button {
 
     padding: 20px;
     font-size: 13px;
+}
+
+.pop-up__confirm-btn {
+    width: 100%;
+
+    padding: 14px 0px;
+
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    background: #b59f5b;
+    color: white;
 }
 
 /* ---------- hero ---------- */

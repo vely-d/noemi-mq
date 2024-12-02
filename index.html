@@ -9,34 +9,37 @@
 </head>
 
 <body>
-    <div class="pop-up__wrapper">
+    <div class="pop-up-wrapper" id="pop-up-wrapper1">
         <form class="pop-up">
             <button type="button" class="pop-up__x-btn" onclick="togglePopup();"></button>
-            <h1 class="section__title">ваш фидбек</h1>
-                <label class="pop-up__label" for="pop-up__cmbx">Как часто вы заходите на сайт?</label>
-                <div class="combo-box__wrapper">
-                    <input id="pop-up__cmbx" class="pop-up__frequency-input" type="text" list="exampleList" placeholder="Почти каждый день">
-                        <datalist id="exampleList">
-                            <option>Почти каждый день</option>
-                            <option>Раз в пару дней</option>
-                            <option>Раз в неделю</option>
-                            <option>Раз в месяц или реже</option>
-                        </datalist>
-                    <img src="./sources/svg/form-arrows.svg" alt="стрелки" class="combo-box__arrows-img">
+            <h1 class="pop-up__title">ваш фидбек</h1>
+            <label class="pop-up__label" for="combobox-field1">Как часто вы заходите на сайт?</label>
+            <div class="pop-up__combobox combobox">
+                <input id="combobox-field1" class="combobox-field" type="text" list="exampleList"
+                    placeholder="Почти каждый день">
+                <datalist id="exampleList">
+                    <option>Почти каждый день</option>
+                    <option>Раз в пару дней</option>
+                    <option>Раз в неделю</option>
+                    <option>Раз в месяц или реже</option>
+                </datalist>
+                <img src="./sources/svg/form-arrows.svg" alt="стрелки" class="combobox__arrows-img">
+            </div>
+            <p class="pop-up__label">Вы подписаны на e-mail рассылку?</p>
+            <fieldset class="pop-up__radio-inputs">
+                <div>
+                    <input type="radio" id="yes-rbtn" name="drone" value="Да" checked="">
+                    <label class="pop-up__rbtn-label" for="yes-rbtn">Да</label>
                 </div>
-                <p class="pop-up__label">Вы подписаны на e-mail рассылку?</p>
-                <fieldset class="pop-up__radio-inputs">
-                    <div>
-                        <input type="radio" id="yes-rbtn" name="drone" value="Да" checked="">
-                        <label class="pop-up__rbtn-label" for="yes-rbtn">Да</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="no-rbtn" name="drone" value="Нет">
-                        <label class="pop-up__rbtn-label" for="no-rbtn">Нет</label>
-                    </div>
-                </fieldset><label class="pop-up__label" for="requests_textaera">Расскажие, какой контент вы бы хотели видеть на нашем сайте?</label>
-                <textarea id="requests_textaera" name="requests" rows="5" cols="33" placeholder="Может, больше рецептов?" class="pop-up__textarea"></textarea>
-            <button type="submit" class="mailing__form__confirm-btn">отправить</button>
+                <div>
+                    <input type="radio" id="no-rbtn" name="drone" value="Нет">
+                    <label class="pop-up__rbtn-label" for="no-rbtn">Нет</label>
+                </div>
+            </fieldset><label class="pop-up__label" for="requests_textaera">Расскажие, какой контент вы бы хотели видеть
+                на нашем сайте?</label>
+            <textarea id="requests_textaera" name="requests" rows="5" cols="33" placeholder="Может, больше рецептов?"
+                class="pop-up__textarea"></textarea>
+            <button type="submit" class="pop-up__confirm-btn">отправить</button>
         </form>
     </div>
     <header class="hero masked">
@@ -67,7 +70,7 @@
         </div>
     </header>
     <section class="trends">
-        <h1 class="section__title">сейчас в тренде</h1>
+        <h2 class="section__title">сейчас в тренде</h2>
         <article class="trend-post masked" style="background-image: url('./sources/img/trend1.jpg') ;">
             <div class="trend-post__info">
                 <ul class="post__tags-list">
@@ -83,7 +86,8 @@
                     <li class="post__tag _trend"><a href="#0">travel</a></li>
                     <li class="post__tag _trend"><a href="#0">health</a></li>
                 </ul>
-                <h2 class="post__title _trend"><a href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a></h2>
+                <h2 class="post__title _trend"><a href="#0">сыры на красивых картинках из интернета: какие они на
+                        вкус?</a></h2>
             </div>
         </article>
         <article class="trend-post masked" style="background-image: url('./sources/img/trend3.jpg') ;">
@@ -109,7 +113,8 @@
         <main class="post-list">
             <article class="post">
                 <div class="img">
-                    <img class="post__pic undraggable" src="./sources/img/last-post1.jpg" alt="человек на берегу на рассвете">
+                    <img class="post__pic undraggable" src="./sources/img/last-post1.jpg"
+                        alt="человек на берегу на рассвете">
                 </div>
                 <div class="post__info">
                     <ul class="post__tags-list">
@@ -225,14 +230,15 @@
                             потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
                     </div>
                 </div>
-            </article>    
+            </article>
         </main>
         <aside class="widgets">
             <section class="new-posts">
                 <h2 class="widget__title">новые посты</h2>
                 <article class="new-post">
                     <div class="img">
-                        <img class="new-post__thumbnail undraggable" src="./sources/img/2.jpg" alt="человек на берегу на рассвете">
+                        <img class="new-post__thumbnail undraggable" src="./sources/img/2.jpg"
+                            alt="человек на берегу на рассвете">
                     </div>
                     <time class="new-post__pubdate" datetime="2019-10-14" title="14 июня 2019">14 июня 2019</time>
                     <h3 class="new-post__title"><a href="#0">10 мест, ради которых стоит проснуться</a></h3>
@@ -352,47 +358,58 @@
     </div>
     <section class="our-products">
         <div class="container">
-            <h1 class="section__title">наши изделия</h1>
+            <h2 class="section__title">наши изделия</h2>
             <div class="products-list">
                 <article class="product">
-                    <img src="./sources/img/shop-item-desk1.jpg" alt="розовая подушка на белом стуле" class="product__image">
+                    <img src="./sources/img/shop-item-desk1.jpg" alt="розовая подушка на белом стуле"
+                        class="product__image">
                     <div class="product__info">
                         <h2 class="product__title">подушки на диван</h2>
-                        <p class="product__description">Набор из двух подушек с модными принтами. Видео о создании <a class="product__link" href="#">здесь</a>.</p>
+                        <p class="product__description">Набор из двух подушек с модными принтами. Видео о создании <a
+                                class="product__link" href="#">здесь</a>.</p>
                         <div class="purchase-info__wrapper">
                             <span class="product__price product__price__before">1000 ₽</span>
                             <span class="product__price">800 ₽</span>
-                            <label for="email-input2" class="visualy-hidden"></label>
-                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn" id="email-input2">в мазазин</button>
+                            <label for="go-purchasing-btn1" class="visualy-hidden"></label>
+                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn"
+                                id="go-purchasing-btn1">в мазазин</button>
                         </div>
                     </div>
                 </article>
                 <article class="product">
-                    <img src="./sources/img/shop-item-desk2.jpg" alt="кукла-зайчик рядом со стопкой книг" class="product__image">
+                    <img src="./sources/img/shop-item-desk2.jpg" alt="кукла-зайчик рядом со стопкой книг"
+                        class="product__image">
                     <div class="product__info">
                         <h2 class="product__title">кукла "зайчик"</h2>
-                        <p class="product__description">Интерьерная рукодельная кукла "Зайчик", созданию которой посвящена <a class="product__link" href="#">весенняя серия постов</a> в блоге и несколько подкастов</p>
+                        <p class="product__description">Интерьерная рукодельная кукла "Зайчик", созданию которой
+                            посвящена <a class="product__link" href="#">весенняя серия постов</a> в блоге и несколько
+                            подкастов</p>
                         <div class="purchase-info__wrapper">
                             <span class="product__price">3500 ₽</span>
-                            <label for="email-input2" class="visualy-hidden"></label>
-                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn" id="email-input2">в мазазин</button>
+                            <label for="go-purchasing-btn2" class="visualy-hidden"></label>
+                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn"
+                                id="go-purchasing-btn2">в мазазин</button>
                         </div>
                     </div>
                 </article>
                 <article class="product">
-                    <img src="./sources/img/shop-item-desk3.jpg" alt="шестиугольная рамка рядом с вазой с цветами" class="product__image">
+                    <img src="./sources/img/shop-item-desk3.jpg" alt="шестиугольная рамка рядом с вазой с цветами"
+                        class="product__image">
                     <div class="product__info">
                         <h2 class="product__title">шестиугольная рамка</h2>
-                        <p class="product__description">Необычная рамка для украшения дома из видео <a class="product__link" href="#">"Как сделать рамку из подручных средств за 30 минут"</a>.</p>
+                        <p class="product__description">Необычная рамка для украшения дома из видео <a
+                                class="product__link" href="#">"Как сделать рамку из подручных средств за 30 минут"</a>.
+                        </p>
                         <div class="purchase-info__wrapper">
                             <span class="product__price product__price__before">500 ₽</span>
                             <span class="product__price">400 ₽</span>
-                            <label for="email-input2" class="visualy-hidden"></label>
-                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn" id="email-input2">в мазазин</button>
+                            <label for="go-purchasing-btn3" class="visualy-hidden"></label>
+                            <button type="submit" class="mailing__form__confirm-btn visit-store-btn"
+                                id="go-purchasing-btn3">в мазазин</button>
                         </div>
                     </div>
                 </article>
-                
+
             </div>
         </div>
     </section>
@@ -442,16 +459,16 @@
             images[i].addEventListener('error', ImageOnError)
         }
 
-        const popup = document.getElementsByClassName('pop-up__wrapper')[0];
-        
-        function togglePopup() { 
-            if(popup.classList.contains('visualy-hidden')) {
+        const popup = document.getElementById('pop-up-wrapper1');
+
+        function togglePopup() {
+            if (popup.classList.contains('visualy-hidden')) {
                 popup.classList.remove('visualy-hidden');
             }
             else {
                 popup.classList.add('visualy-hidden');
             }
-             
+
         }
 
 
