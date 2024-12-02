@@ -402,7 +402,7 @@ button {
     transform: translate(-50%, 0px);
 }
 
-.hero__menu__burger {
+.hero__burger {
     display: none;
 
     background-image: url("./sources/svg/menu-burger.svg");
@@ -453,6 +453,33 @@ button {
     margin-bottom: 64px;
 }
 
+.trends__title {
+    position: relative;
+
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    text-align: center;
+
+    grid-column: 1 / -1;
+}
+
+.trends__title:after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 35px);
+
+    width: 66px;
+    height: 3px;
+    background: #b59f5b;
+}
+
 .section__title {
     position: relative;
 
@@ -476,11 +503,6 @@ button {
     width: 66px;
     height: 3px;
     background: #b59f5b;
-}
-
-.trends .section__title {
-    /* grid-column: 1 / span 4; */
-    grid-column: 1 / -1;
 }
 
 .trend-post {
@@ -507,6 +529,24 @@ button {
     padding: 7em 5em;
     border: 3px solid #b59f5b;
     border: 0.6em solid #b59f5b;
+}
+
+.trend-post__tags-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    column-gap: 15px;
+}
+
+.trend-post__tag {
+    font-size: 2.8em;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.27px;
+    text-transform: uppercase;
+    color: #b59f5b;
+
+    position: relative;
 }
 
 .trend-post__title {
@@ -589,6 +629,7 @@ button {
     font-size: 2.8em;
 }
 
+
 .post__tag:hover:after {
     content: "";
 
@@ -614,7 +655,7 @@ button {
     margin-top: 7px;
 }
 
-.post__title._trend {
+.trend-post__title {
     font-size: 4em;
     margin-top: 0.35em;
 }
@@ -648,7 +689,7 @@ button {
     gap: 10px;
 }
 
-.post__text__paragraph {
+.post__text-paragraph {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.53px;
@@ -734,7 +775,7 @@ button {
     transform: scale(0);
 }
 
-.search__form {
+.search-form {
     margin-top: 60px;
     display: flex;
 }
@@ -751,7 +792,7 @@ button {
     flex-grow: 1;
 }
 
-.search__form__lense-btn {
+.search-form__lense-btn {
     width: 50px;
     height: 50px;
     background-color: #b59f5b;
@@ -765,7 +806,7 @@ button {
     margin-bottom: 39px;
 }
 
-.mailing__form__email {
+.mailing__textbox {
     box-sizing: border-box;
 
     padding: 15px 17px;
@@ -780,7 +821,7 @@ button {
     width: 100%;
 }
 
-.mailing__form__confirm-btn {
+.mailing__confirm-btn {
     width: 100%;
 
     padding: 14px 0px;
@@ -805,7 +846,7 @@ button {
     display: inline;
 }
 
-.widget__tag {
+.tags-widget__tag {
     font-weight: 800;
     font-size: 12px;
     line-height: 3;
@@ -818,7 +859,7 @@ button {
     margin-right: 4px;
 }
 
-.widget__tag:hover {
+.tags-widget__tag:hover {
     border-color: #b59f5b;
 }
 
@@ -864,6 +905,31 @@ button {
 
 .our-products {
     margin-top: 60px;
+}
+
+.our-products__title {
+    position: relative;
+
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.our-products__title:after {
+    content: "";
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 35px);
+
+    width: 66px;
+    height: 3px;
+    background: #b59f5b;
 }
 
 .products-list {
@@ -921,7 +987,7 @@ button {
     text-decoration: underline;
 }
 
-.purchase-info__wrapper {
+.product__purchase-info {
     /* for prices and button vertical alignment */
     /* margin-top: auto; */
     margin-top: 26px;
@@ -941,13 +1007,24 @@ button {
     grid-column: span 1;
 }
 
-.product__price__before {
+.product__price_crossed {
     font-size: 14px;
     grid-row: 1;
     text-decoration: line-through;
 }
 
-.visit-store-btn {
+.product__to-store-btn {
+    width: 100%;
+
+    padding: 14px 0px;
+
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    background: #b59f5b;
+    color: white;
+
     grid-row: span 2;
     grid-column: span 1;
 }
@@ -1017,7 +1094,7 @@ button {
         display: none;
     }
 
-    .hero__menu__burger {
+    .hero__burger {
         display: block;
         width: 45px;
         height: 45px;
