@@ -1,7 +1,6 @@
 /* ---------- preps ---------- */
 
 @font-face {
-    /* font-family: "OpenSans-Bold"; */
     font-family: OpenSans;
     src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff") format("woff");
     font-weight: 800;
@@ -101,6 +100,10 @@ button {
     vertical-align: top;
 }
 
+button {
+    font-family: inherit;
+}
+
 input,
 input:focus-visible,
 input:focus,
@@ -167,15 +170,15 @@ button {
     /* transform: translate(-50%, -50%); */
 
     width: 388px;
-    height: 589px;
+    min-height: 589px;
     background-color: white;
     
 
     display: flex;
     flex-direction: column;
-    /* gap: 25px; */
+    gap:15px;
 
-    padding: 50px 30px 0px;
+    padding: 50px 30px 50px;
 
     animation: pop-up-appears 0.5s;
 }
@@ -204,12 +207,9 @@ button {
     background-color: transparent;
 }
 
-/* .pop-up__form__row {
-    margin-bottom: 10px;
-} */
-
 .pop-up__label {
     font-size: 13px;
+    letter-spacing: 0.017em;
 }
 
 .pop-up__label + * {
@@ -251,13 +251,11 @@ button {
 
 .pop-up__radio-inputs {
     display: flex; 
-    /* gap: 40px; */
     gap: 15px;
     margin-top: 6px;
 }
 
 .pop-up__rbtn-label {
-    /* line-height: 30px; */
     position: relative;
     top: -4px;
     font-size: 13px;
@@ -265,7 +263,6 @@ button {
 
 .pop-up__textarea {
     resize: none;
-    /* min-height: 100px; */
     min-height: 137px;
     width: 100%;
     field-sizing: content;
@@ -278,13 +275,15 @@ button {
 
 .container {
     max-width: 1200px;
-    width: 100%;
+    /* width: 100%; */
+    width: 100vw;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .container-justified {
     display: flex;
+    gap: 35px;
     justify-content: space-between;
 }
 
@@ -362,9 +361,23 @@ button {
     transform: translate(-50%, 0px);
 }
 
+.hero__menu__burger {
+    display: none;
+
+    background-image: url("./sources/svg/menu-burger.svg");
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    border: none;
+
+    /* background: no-repeat url("./sources/svg/menu-burger.svg"); */
+}
+
 .title-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     height: max-content;
     flex-grow: 1;
@@ -372,8 +385,11 @@ button {
     padding-bottom: 100px;
 }
 
+.title-wrapper .noemi-logo {
+    display: none;
+}
+
 .hero__title {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 45px;
     font-weight: 800;
     line-height: 1.6;
@@ -384,14 +400,15 @@ button {
 /* ---------- trends ---------- */
 
 .trends {
-    
     --cell-fraction: calc((100vw - 3 * 5px) / 16);
     display: grid;
-    grid-template-rows: 1fr calc(var(--cell-fraction) * 3) ;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(4, calc(var(--cell-fraction) * 4));
-    /* row-gap: 40px; */
+    grid-auto-columns: calc(var(--cell-fraction) * 4);
+    grid-auto-rows: calc(var(--cell-fraction) * 3) ;
     column-gap: 5px;
-    
+    grid-auto-flow:dense;
+
     margin-bottom: 64px;
 }
 
@@ -400,15 +417,12 @@ button {
 
     margin-bottom: 40px;
 
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: 0.1px;
     text-transform: uppercase;
     text-align: center;
-
-    grid-column: 1 / span 4;
 }
 
 .section__title:after {
@@ -423,47 +437,45 @@ button {
     background: #b59f5b;
 }
 
+.trends .section__title {
+    /* grid-column: 1 / span 4; */
+    grid-column: 1 / -1;
+}
 
 .trend-post {
     /* font-size: 5px; */
-    font-size: 0.28vw;
+    font-size: 0.3125vw;
 
     position: relative;
-    /* padding: 25px; */
-    padding: 5em;
+    padding: 25px 20px;
+    /* padding: 5em; */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     display: flex;
     flex-direction: column-reverse;
+
+    color: white;
 }
 
 .trend-post__info {
     position: relative;
     z-index: 2;
 
-    /* padding: 35px 25px; */
     padding: 7em 5em;
     border: 3px solid #b59f5b;
+    border: 0.6em solid #b59f5b;
 }
 
 .trend-post__title {
-    color: white;
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
-    /* font-size: 20px; */
     font-size: 4em;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: 0.1px;
     text-transform: uppercase;
 
-    /* margin-top: 7px; */
     margin-top: 0.3em;
-}
-
-.trend-post__title:hover {
-    color: #b59f5b;
 }
 
 /* ---------- post-list ---------- */
@@ -475,7 +487,8 @@ button {
 }
 
 .post-list {
-    width: 780px;
+    max-width: 780px;
+    width: 100%;
 }
 
 .post {
@@ -487,9 +500,8 @@ button {
 }
 
 .post__pic {
-    
-    height: 294px;
     width: 381px;
+    height: auto;
     object-fit: cover;
 
     img{
@@ -522,7 +534,6 @@ button {
 }
 
 .post__tag {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 14px;
     font-weight: 800;
     line-height: 1.1;
@@ -531,6 +542,10 @@ button {
     color: #b59f5b;
 
     position: relative;
+}
+
+.post__tag._trend {
+    font-size: 2.8em;
 }
 
 .post__tag:hover:after {
@@ -547,14 +562,20 @@ button {
 }
 
 .post__title {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
     letter-spacing: 0.1px;
     text-transform: uppercase;
 
+    color: inherit;
+
     margin-top: 7px;
+}
+
+.post__title._trend {
+    font-size: 4em;
+    margin-top: 0.35em;
 }
 
 .post__title:hover {
@@ -573,7 +594,6 @@ button {
 }
 
 .post__author {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-weight: 800;
     font-size: 12px;
     color: black;
@@ -605,7 +625,6 @@ button {
 }
 
 .widget__title {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 14px;
     line-height: 1;
     text-align: center;
@@ -654,7 +673,6 @@ button {
 }
 
 .new-post__title {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-weight: 800;
     font-size: 14.4px;
     line-height: 1.24;
@@ -726,7 +744,6 @@ button {
 
     padding: 14px 0px;
 
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-weight: 800;
     font-size: 14px;
     text-transform: uppercase;
@@ -748,7 +765,6 @@ button {
 }
 
 .widget__tag {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-weight: 800;
     font-size: 12px;
     line-height: 3;
@@ -796,7 +812,6 @@ button {
 .theme:after {
     content: attr(data-post-count);
 
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 12px;
     color: #b59f5b;
 
@@ -815,6 +830,8 @@ button {
 
     display: flex;
     justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
 .product {
@@ -828,7 +845,6 @@ button {
     padding: 35px 0 5px;
 
     outline: 5px solid #b59f5b90;
-    /* make outline semi-transparent is yet to do */
     outline-offset: 20px;
     flex-grow: 1;
 
@@ -843,7 +859,6 @@ button {
 }
 
 .product__title {
-    /* font-family: "OpenSans-Bold", "Helvetica", sans-serif; */
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
@@ -949,4 +964,113 @@ button {
     text-align: center;
 
     color: #999999;
+}
+
+@media (max-width: 1280px) {
+
+    .container {
+        padding: 0 36px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .hero__menu__burger {
+        display: block;
+        width: 45px;
+        height: 45px;
+    }
+
+    .trends {
+    
+        --cell-fraction: calc((100vw - 5px) / 8);
+        grid-template-columns: calc(var(--cell-fraction) * 4) calc(var(--cell-fraction) * 4);
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    .trend-post {
+        font-size: 0.625vw;
+    }
+
+    .post {
+        display: block;
+    }
+
+    .post__pic {
+        width: 100%;
+    }
+
+    .post__info {
+        padding-left: 0;
+        margin-top: 18px;
+    }
+
+    .post__title {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero__title {
+        font-size: 26px;
+        margin-top: 45px;
+    }
+
+    .hero__menu .noemi-logo {
+        display: none;
+    }
+
+    .noemi-link {
+        width: 71%;
+    }
+
+    .noemi-logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .title-wrapper .noemi-logo {
+        display: block;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .trends {
+        grid-template-columns: 100vw;
+        grid-auto-rows: 75vw;
+        
+        row-gap: 5px;
+        column-gap: 5px;
+    }
+
+    .container.container-justified {
+        display: block;
+        width: fit-content;
+    }
+
+    .post {
+        margin-top: 38px;
+
+        padding-bottom: 25px;
+
+        border-bottom: 5px solid #eeeeee;
+    }
+
+    .widgets {
+        width: 100%;
+        margin-top: 44px;
+    }
+
+    .trend-post {
+        font-size: 1.25vw;
+    }
+
+    .post__title {
+        font-size: 16px;
+    }
 }

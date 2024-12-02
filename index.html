@@ -12,9 +12,7 @@
     <div class="pop-up__wrapper">
         <form class="pop-up">
             <button type="button" class="pop-up__x-btn" onclick="togglePopup();"></button>
-            <h1 class="section__title" style="margin-bottom: 35px;">ваш фидбек</h1>
-    
-            <div class="pop-up__form__row">
+            <h1 class="section__title">ваш фидбек</h1>
                 <label class="pop-up__label" for="pop-up__cmbx">Как часто вы заходите на сайт?</label>
                 <div class="combo-box__wrapper">
                     <input id="pop-up__cmbx" class="pop-up__frequency-input" type="text" list="exampleList" placeholder="Почти каждый день">
@@ -26,9 +24,6 @@
                         </datalist>
                     <img src="./sources/svg/form-arrows.svg" alt="стрелки" class="combo-box__arrows-img">
                 </div>
-            </div>
-    
-            <div class="pop-up__form__row" style="margin-top: 29px;">
                 <p class="pop-up__label">Вы подписаны на e-mail рассылку?</p>
                 <fieldset class="pop-up__radio-inputs">
                     <div>
@@ -39,14 +34,8 @@
                         <input type="radio" id="no-rbtn" name="drone" value="Нет">
                         <label class="pop-up__rbtn-label" for="no-rbtn">Нет</label>
                     </div>
-                </fieldset>
-            </div>
-    
-            <div class="pop-up__form__row" style="margin-top: 24px;margin-bottom: 10px;">
-                <label class="pop-up__label" for="requests_textaera" style="letter-spacing: 0.017em;">Расскажие, какой контент вы бы хотели видеть на нашем сайте?</label>
+                </fieldset><label class="pop-up__label" for="requests_textaera">Расскажие, какой контент вы бы хотели видеть на нашем сайте?</label>
                 <textarea id="requests_textaera" name="requests" rows="5" cols="33" placeholder="Может, больше рецептов?" class="pop-up__textarea"></textarea>
-            </div>
-    
             <button type="submit" class="mailing__form__confirm-btn">отправить</button>
         </form>
     </div>
@@ -66,8 +55,13 @@
                         <li class="menu__link"><a href="#0">контакты</a></li>
                     </ul>
                 </nav>
+                <label class="visualy-hidden" for="burger-button1">burger button</label>
+                <button id="burger-button1" class="hero__menu__burger" type="button"></button>
             </div>
             <div class="title-wrapper">
+                <a class="noemi-link" href="#0">
+                    <img src="./sources/svg/noemi-logo.svg" alt="noemi" class="noemi-logo">
+                </a>
                 <h1 class="hero__title">блог о творчестве, спорте,<br>и образе жизни</h1>
             </div>
         </div>
@@ -77,37 +71,37 @@
         <article class="trend-post masked" style="background-image: url('./sources/img/trend1.jpg') ;">
             <div class="trend-post__info">
                 <ul class="post__tags-list">
-                    <li class="post__tag"><a href="#0">travel</a></li>
-                    <li class="post__tag"><a href="#0">health</a></li>
+                    <li class="post__tag _trend"><a href="#0">travel</a></li>
+                    <li class="post__tag _trend"><a href="#0">health</a></li>
                 </ul>
-                <h2 class="trend-post__title">сейчас в тренде: сад на подоконнике</h2>
+                <h2 class="post__title _trend"><a href="#0">сейчас в тренде: сад на подоконнике</a></h2>
             </div>
         </article>
         <article class="trend-post masked" style="background-image: url('./sources/img/trend2.jpg') ;">
             <div class="trend-post__info">
                 <ul class="post__tags-list">
-                    <li class="post__tag"><a href="#0">travel</a></li>
-                    <li class="post__tag"><a href="#0">health</a></li>
+                    <li class="post__tag _trend"><a href="#0">travel</a></li>
+                    <li class="post__tag _trend"><a href="#0">health</a></li>
                 </ul>
-                <h2 class="trend-post__title">сыры на красивых картинках из интернета: какие они на вкус?</h2>
+                <h2 class="post__title _trend"><a href="#0">сыры на красивых картинках из интернета: какие они на вкус?</a></h2>
             </div>
         </article>
         <article class="trend-post masked" style="background-image: url('./sources/img/trend3.jpg') ;">
             <div class="trend-post__info">
                 <ul class="post__tags-list">
-                    <li class="post__tag"><a href="#0">travel</a></li>
-                    <li class="post__tag"><a href="#0">health</a></li>
+                    <li class="post__tag _trend"><a href="#0">travel</a></li>
+                    <li class="post__tag _trend"><a href="#0">health</a></li>
                 </ul>
-                <h2 class="trend-post__title">собираемся в первый поход в горы</h2>
+                <h2 class="post__title _trend"><a href="#0">собираемся в первый поход в горы</a></h2>
             </div>
         </article>
         <article class="trend-post masked" style="background-image: url('./sources/img/trend4.jpg') ;">
             <div class="trend-post__info">
                 <ul class="post__tags-list">
-                    <li class="post__tag"><a href="#0">travel</a></li>
-                    <li class="post__tag"><a href="#0">health</a></li>
+                    <li class="post__tag _trend"><a href="#0">travel</a></li>
+                    <li class="post__tag _trend"><a href="#0">health</a></li>
                 </ul>
-                <h2 class="trend-post__title">сейчас в тренде: сколько витамина с в лимонах?</h2>
+                <h2 class="post__title _trend"><a href="#0">сейчас в тренде: сколько витамина с в лимонах?</a></h2>
             </div>
         </article>
     </section>
@@ -356,7 +350,6 @@
             </section>
         </aside>
     </div>
-
     <section class="our-products">
         <div class="container">
             <h1 class="section__title">наши изделия</h1>
