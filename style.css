@@ -142,10 +142,12 @@ button {
 .pop-up__wrapper {
     height: 100vh;
     width: 100vw;
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 50px 16px 0;
+
+    z-index: 10;
 }
 
 .pop-up__wrapper:after {
@@ -163,14 +165,14 @@ button {
 }
 
 .pop-up {
-    position: fixed;
+    position: relative;
     z-index: 4;
-    /* top: 50%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%); */
 
-    width: 388px;
-    min-height: 589px;
+    max-width: 388px;
+    width: 100%;
+    /* sort of required but eh.. */
+    /* min-height: 589px; */
+    height: fit-content;
     background-color: white;
     
 
@@ -178,7 +180,7 @@ button {
     flex-direction: column;
     gap:15px;
 
-    padding: 50px 30px 50px;
+    padding: 30px;
 
     animation: pop-up-appears 0.5s;
 }
