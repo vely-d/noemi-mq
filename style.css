@@ -895,6 +895,7 @@ button {
 }
 
 .product {
+    max-width: calc(100vw - 32px);
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -916,6 +917,11 @@ button {
 .product__image {
     width: 100%;
     height: auto;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .product__title {
