@@ -445,7 +445,7 @@ button {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, calc(var(--cell-fraction) * 4));
     grid-auto-columns: calc(var(--cell-fraction) * 4);
-    grid-auto-rows: calc(var(--cell-fraction) * 3.11) ;
+    /* grid-auto-rows: calc(var(--cell-fraction) * 3.11) ; */
     column-gap: 5px;
     grid-auto-flow:dense;
 
@@ -483,6 +483,8 @@ button {
 }
 
 .trend-post {
+    min-height: calc(var(--cell-fraction) * 3.11);
+
     /* font-size: 5px; */
     font-size: 0.3125vw;
 
@@ -1086,12 +1088,14 @@ button {
         .trends {
             --cell-fraction: calc((100vw - 5px) / 8);
             grid-template-columns: calc(var(--cell-fraction) * 4) calc(var(--cell-fraction) * 4);
-            grid-auto-rows: calc(var(--cell-fraction)* 2.61);
+            /* grid-auto-rows: calc(var(--cell-fraction)* 2.61); */
             row-gap: 5px;
             column-gap: 5px;
         }
 
         .trend-post {
+            min-height: calc(var(--cell-fraction)* 2.61);
+
             font-size: 0.625vw;
         }
     
@@ -1232,7 +1236,7 @@ button {
     @media (orientation: portrait) { 
         .trends {
             grid-template-columns: 100vw;
-            grid-auto-rows: 63.6vw;
+            /* grid-auto-rows: 63.6vw; */
             
             row-gap: 5px;
             column-gap: 5px; 
@@ -1240,6 +1244,8 @@ button {
     }
 
     .trends {
+        min-height: 63.6vw;
+
         margin-bottom: 45px;
     }
 
