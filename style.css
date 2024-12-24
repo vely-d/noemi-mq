@@ -1039,6 +1039,8 @@ button {
     color: #999999;
 }
 
+
+
 @media (max-width: 1280px) {
 
     .container {
@@ -1080,12 +1082,29 @@ button {
         line-height: 1.5;
     }
 
+    @media ((orientation: portrait) or (max-height: 450px)) {
+        .trends {
+            --cell-fraction: calc((100vw - 5px) / 8);
+            grid-template-columns: calc(var(--cell-fraction) * 4) calc(var(--cell-fraction) * 4);
+            grid-auto-rows: calc(var(--cell-fraction)* 2.61);
+            row-gap: 5px;
+            column-gap: 5px;
+        }
+
+        .trend-post {
+            font-size: 0.625vw;
+        }
+    
+        .trend-post__info {
+            padding: 7em 6.1em;
+        }
+    
+        .trend-post__title {
+            font-size: 3.7em;
+        }
+    }
+
     .trends {
-        --cell-fraction: calc((100vw - 5px) / 8);
-        grid-template-columns: calc(var(--cell-fraction) * 4) calc(var(--cell-fraction) * 4);
-        grid-auto-rows: calc(var(--cell-fraction)* 2.61);
-        row-gap: 5px;
-        column-gap: 5px;
         margin-bottom: 45px;
     }
 
@@ -1094,17 +1113,7 @@ button {
         margin-bottom: 25px;
     }
 
-    .trend-post {
-        font-size: 0.625vw;
-    }
-
-    .trend-post__info {
-        padding: 7em 6.1em;
-    }
-
-    .trend-post__title {
-        font-size: 3.7em;
-    }
+    
 
     .post {
         display: block;
@@ -1220,13 +1229,17 @@ button {
         padding: 0 16px;
     }
 
-    .trends {
-        grid-template-columns: 100vw;
-        grid-auto-rows: 63.6vw;
-        
-        row-gap: 5px;
-        column-gap: 5px;
+    @media (orientation: portrait) { 
+        .trends {
+            grid-template-columns: 100vw;
+            grid-auto-rows: 63.6vw;
+            
+            row-gap: 5px;
+            column-gap: 5px; 
+        }
+    }
 
+    .trends {
         margin-bottom: 45px;
     }
 
