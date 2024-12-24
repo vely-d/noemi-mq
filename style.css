@@ -335,7 +335,7 @@ button {
 
 .hero {
     padding-top: 27px;
-    margin-bottom: 62px;
+    margin-bottom: 58px;
     min-height: 450px;
 
     background-color: rgb(68, 135, 112);
@@ -437,12 +437,13 @@ button {
 /* ---------- trends ---------- */
 
 .trends {
+    /* --cell-fraction: calc((100vw - 3 * 5px) / 16); */
     --cell-fraction: calc((100vw - 3 * 5px) / 16);
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(4, calc(var(--cell-fraction) * 4));
     grid-auto-columns: calc(var(--cell-fraction) * 4);
-    grid-auto-rows: calc(var(--cell-fraction) * 3) ;
+    grid-auto-rows: calc(var(--cell-fraction) * 3.11) ;
     column-gap: 5px;
     grid-auto-flow:dense;
 
@@ -482,7 +483,7 @@ button {
     font-size: 0.3125vw;
 
     position: relative;
-    padding: 25px 20px;
+    padding: 15px 20px;
     /* padding: 5em; */
     background-position: center center;
     background-repeat: no-repeat;
@@ -498,7 +499,7 @@ button {
     position: relative;
     z-index: 2;
 
-    padding: 7em 5em;
+    padding: 6.3em 6.1em;
     border: 3px solid #b59f5b;
     border: 0.6em solid #b59f5b;
 }
@@ -550,6 +551,10 @@ button {
     margin-top: 0.35em;
 }
 
+.trend-post__title {
+    letter-spacing: -0.25px;
+}
+
 /* ---------- post-list ---------- */
 
 .page-content-wrapper {
@@ -568,7 +573,7 @@ button {
 }
 
 .post:nth-child(n + 2) {
-    margin-top: 54px;
+    margin-top: 56px;
 }
 
 .post__pic {
@@ -860,7 +865,7 @@ button {
 /* ---------- our-products ---------- */
 
 .our-products {
-    margin-top: 60px;
+    margin-top: 54px;
 }
 
 .our-products__title {
@@ -918,8 +923,10 @@ button {
 }
 
 .product__description {
-    margin-top: 15px;
+    margin-top: 1px;
     margin-bottom: 26px;
+
+    letter-spacing: -0.53px;
 }
 
 .product__link {
@@ -936,7 +943,7 @@ button {
     /* margin-top: auto; */
     margin-top: 26px;
     display: grid;
-    grid: 1fr 1fr / 1fr 1fr;
+    grid: 1fr 1fr / 53% 1fr;
 }
 
 .product__price {
@@ -947,11 +954,16 @@ button {
     letter-spacing: 0.1px;
     text-transform: uppercase;
 
+    position: relative;
+    bottom: 8px;
+
     grid-row: 2 / span 1;
     grid-column: span 1;
 }
 
 .product__price_crossed {
+    position: static;
+
     font-size: 14px;
     grid-row: 1;
     text-decoration: line-through;
