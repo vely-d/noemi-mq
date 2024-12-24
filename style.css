@@ -1040,6 +1040,12 @@ button {
     }
 
     .hero {
+        padding-top: 45px;
+
+        margin-bottom: 45px;
+
+        min-height: 390px;
+
         background-image: url("./sources/img/banner-bg-tablet.jpg");
     }
 
@@ -1054,20 +1060,56 @@ button {
         height: var(--side);
     }
 
+    .noemi-logo {
+        width: 156px;
+    }
+
+    .title-wrapper {
+        padding-top: 80px;
+    }
+
+    .hero__title {
+        max-width: 640px;
+        font-size: 40px;
+        line-height: 1.5;
+    }
+
     .trends {
-    
         --cell-fraction: calc((100vw - 5px) / 8);
         grid-template-columns: calc(var(--cell-fraction) * 4) calc(var(--cell-fraction) * 4);
+        grid-auto-rows: calc(var(--cell-fraction)* 2.61);
         row-gap: 5px;
         column-gap: 5px;
+        margin-bottom: 45px;
+    }
+
+    .trends__title {
+        letter-spacing: -1.2px;
+        margin-bottom: 25px;
     }
 
     .trend-post {
         font-size: 0.625vw;
     }
 
+    .trend-post__info {
+        padding: 7em 6.1em;
+    }
+
+    .trend-post__title {
+        font-size: 3.7em;
+    }
+
     .post {
         display: block;
+
+        padding-bottom: 18px;
+
+        border-bottom: 3px solid #eeeeee;
+    }
+
+    .post:nth-child(n + 2) {
+        margin-top: 40px;
     }
 
     .post__pic {
@@ -1076,11 +1118,55 @@ button {
 
     .post__info {
         padding-left: 0;
-        margin-top: 18px;
+        margin-top: 10px;
     }
 
     .post__title {
         font-size: 17px;
+        margin-top: 0.65em;
+    }
+
+    .post__meta {
+        margin-top: 30px;
+    }
+
+    .post__text {
+        margin-top: 25px;
+    }
+
+    .widgets {
+        width: 480px;
+    }
+
+    .our-products {
+        margin-top: 42px;
+    }
+
+    .our-products__title {
+        font-size: 18px;
+    }
+
+    .products-list {
+        gap: 45px;
+    }
+
+    .product__info {
+        margin-top: -15px;
+        padding: 31px 0 5px;
+        outline: 3px solid #b59f5b90;
+        outline-offset: 15px;
+    }
+
+    .product__title {
+        font-size: 17px;
+    }
+
+    .footer {
+        margin-top: 51px;
+    }
+
+    .footer__copyrights-wrapper {
+        padding: 44px 0px 38px 12px;
     }
 }
 
