@@ -427,6 +427,8 @@ button {
 }
 
 .hero__title {
+    max-width: 700px;
+
     font-size: 45px;
     font-weight: 800;
     line-height: 1.6;
@@ -448,6 +450,8 @@ button {
     grid-auto-flow:dense;
 
     margin-bottom: 64px;
+
+    overflow: hidden;
 }
 
 .trends__title {
@@ -678,7 +682,7 @@ button {
 }
 
 .widgets>* {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 }
 
 .widget__title {
@@ -898,7 +902,7 @@ button {
 
 .product__info {
     margin-top: -10px;
-    padding: 35px 0 5px;
+    padding: 30px 0 5px;
 
     outline: 5px solid #b59f5b90;
     outline-offset: 20px;
@@ -918,12 +922,12 @@ button {
     font-size: 20px;
     font-weight: 800;
     line-height: 1.2;
-    letter-spacing: 0.1px;
+    letter-spacing: -0.1px;
     text-transform: uppercase;
 }
 
 .product__description {
-    margin-top: 1px;
+    margin-top: 5px;
     margin-bottom: 26px;
 
     letter-spacing: -0.53px;
@@ -1035,14 +1039,19 @@ button {
         padding: 0 36px;
     }
 
+    .hero {
+        background-image: url("./sources/img/banner-bg-tablet.jpg");
+    }
+
     .menu {
         display: none;
     }
 
     .hero__burger {
         display: block;
-        width: 45px;
-        height: 45px;
+        --side: 33px;
+        width: var(--side);
+        height: var(--side);
     }
 
     .trends {
@@ -1075,24 +1084,40 @@ button {
     }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) { */
+@media (max-width: 450px) {
+
+    .hero {
+        height: 640px;
+        margin-bottom: 38px;
+
+        background-image: url("./sources/img/banner-mobile.jpg");
+    }
+
+    .title-wrapper {
+        padding-top: 166px;
+    }
 
     .hero__title {
+        line-height: 1.4;
         font-size: 26px;
-        margin-top: 45px;
+
+        margin-top: 32px;
     }
 
     .hero__menu .noemi-logo {
         display: none;
     }
 
-    .noemi-link {
+    /* .noemi-link {
         width: 71%;
-    }
+    } */
 
     .noemi-logo {
-        width: 100%;
+        /* width: 100%; */
+        width: 270px;
         height: auto;
+        flex-grow: 1;
     }
 
     .title-wrapper .noemi-logo {
@@ -1105,10 +1130,43 @@ button {
 
     .trends {
         grid-template-columns: 100vw;
-        grid-auto-rows: 75vw;
+        grid-auto-rows: 63.6vw;
         
         row-gap: 5px;
         column-gap: 5px;
+
+        margin-bottom: 45px;
+    }
+
+    .trends__title {
+        font-size: 16px;
+        margin-bottom: 33px;
+    }
+
+    .trends__title:after {
+        transform: translate(-50%, 29px);
+    }
+
+    .trend-post {
+        font-size: 1.25vw;
+        padding: 15px 15px;
+    }
+
+    .trend-post__info {
+        /* padding: 6.3em 3.3em; */
+        padding: 6.3em 7.5em 6.3em 4.5em;
+    }
+
+    .trend-post__tags-list {
+        margin-bottom: 10px;
+    }
+
+    .trend-post__tag {
+        letter-spacing: 1.07px;
+    }
+
+    .trend-post__title {
+        font-size: 3.6em;
     }
 
     .container.container-justified {
@@ -1121,19 +1179,97 @@ button {
 
         padding-bottom: 25px;
 
-        border-bottom: 5px solid #eeeeee;
+        border-bottom: 3px solid #eeeeee;
     }
 
-    .widgets {
-        width: 100%;
-        margin-top: 44px;
+    .post:nth-child(n + 2) {
+        margin-top: 31px;
     }
 
-    .trend-post {
-        font-size: 1.25vw;
+    .post__info {
+        margin-top: 10px;
+    }
+
+    .post__meta {
+        margin-top: 15px;
     }
 
     .post__title {
         font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .post__text {
+        margin-top: 11px;
+    }
+
+    .post__text-paragraph {
+        letter-spacing: 0.23px;
+        line-height: 1.4;
+    }
+
+    .widgets {
+        width: 100%;
+        margin-top: 41px;
+    }
+
+    .widgets>* {
+        margin-bottom: 0;
+    }
+    .widget__title {
+        font-size: 16px;
+    }
+
+    .widget.mailing {
+        margin-top: 41px;
+    }
+
+    .tags-widget {
+        margin-top: 41px;
+    }
+
+    .tags-widget__tag {
+        margin-right: 0px;
+    }
+
+    .themes-widget {
+        margin-top: 39px;
+    }
+
+    .our-products {
+        margin-top: 41px;
+    }
+
+    .our-products__title {
+        font-size: 16px;
+    }
+
+    .our-products__title:after {
+        transform: translate(-50%, 32px);
+    }
+
+    .products-list {
+        padding: 0 19px 24px;
+        gap: 40px
+    }
+
+    .product__info {
+        padding: 29px 0 5px;
+    }
+
+    .product__title {
+        font-size: 17px;
+    }
+
+    .product__description {
+        letter-spacing: -0.63px;
+    }
+
+    .footer {
+        margin-top: 40px;
+    }
+
+    .footer__copyrights-wrapper {
+        padding: 45px 0px 38px 12px;
     }
 }
