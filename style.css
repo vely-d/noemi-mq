@@ -178,9 +178,9 @@ button {
 
     display: flex;
     flex-direction: column;
-    gap:15px;
+    /* gap:15px; */
 
-    padding: 30px;
+    padding: 47px 30px 30px;
 
     animation: pop-up-appears 0.5s;
 }
@@ -239,15 +239,20 @@ button {
 
 .pop-up__label {
     font-size: 13px;
-    letter-spacing: 0.017em;
+    /* letter-spacing: 0.017em; */
 }
 
-.pop-up__label + * {
+/* .pop-up__label + * {
     margin-top: 7px;
-}
+} */
 
 .pop-up__combobox {
     position: relative;
+    margin: 7px 0px 29px 0px;
+}
+
+.pop-up__filler {
+    color: transparent;
 }
 
 .pop-up__combobox * {
@@ -283,7 +288,8 @@ button {
 .pop-up__radio-inputs {
     display: flex; 
     gap: 15px;
-    margin-top: 6px;
+    /* margin-top: 6px; */
+    margin: 6px 0px 27px;
 }
 
 .pop-up__rbtn-label {
@@ -300,6 +306,7 @@ button {
 
     padding: 20px;
     font-size: 13px;
+    margin: 5px 0 23px;
 }
 
 .pop-up__confirm-btn,
@@ -1045,6 +1052,34 @@ button {
 
 @media (max-width: 1280px) {
 
+    input[type=radio] {
+        --radio-size: 26px;
+    }
+
+    .pop-up-wrapper {
+        padding: 236px 16px 0;
+    }
+
+    .pop-up {
+        padding: 49px 30px 53px;
+    }
+
+    .pop-up__x-btn {
+        width: 28px;
+        height: 28px;
+        transform: translateY(-130%);
+    }
+
+    .pop-up__title {
+        font-size: 18px;
+    }
+
+    .pop-up__radio-inputs {
+        --radio-size: 25px; 
+        gap: 32px;
+        margin: 12px 0px 27px;
+    }
+
     .container {
         padding: 0 36px;
     }
@@ -1191,6 +1226,31 @@ button {
 
 /* @media (max-width: 768px) { */
 @media (max-width: 450px) {
+
+    .pop-up-wrapper {
+        padding: 55px 16px 0;
+    }
+
+    .pop-up {
+        padding: 27px 22px 27px;
+    }
+
+    .pop-up__x-btn {
+        transform: translateY(-110%);
+    }
+
+    .pop-up__title {
+        font-size: 16.5px;
+    }
+
+    .pop-up__title:after {
+        transform: translate(-50%, 30px);
+    }
+
+    .pop-up__radio-inputs {
+        gap: 36px;
+        margin: 8px 0px 27px;
+    }
 
     .hero {
         height: 640px;
